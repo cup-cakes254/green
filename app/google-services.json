@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "782212883764",
+    "project_id": "greenhub-a9040",
+    "storage_bucket": "greenhub-a9040.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782212883764:android:767e39766521f378e9f161",
+        "android_client_info": {
+          "package_name": "com.mwikali.greenhub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1NSZ_VIaKf8YOrVc9MdUVEO-54d_o3KM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

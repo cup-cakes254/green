@@ -24,8 +24,8 @@ import com.mwikali.greenhub.ui.theme.Screens.home.RewardCard
 import com.mwikali.greenhub.ui.theme.models.RewardViewModel
 
 @Composable
-fun RewardListScreen(viewModel: RewardViewModel = viewModel()) {
-    // Collect rewards from the ViewModel's state
+fun RewardListScreen(viewModel: RewardViewModel=viewModel()) {
+
     val rewards by viewModel.rewards.collectAsState()
 
     Column(
@@ -40,9 +40,9 @@ fun RewardListScreen(viewModel: RewardViewModel = viewModel()) {
         )
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Check if rewards are available
+
         if (rewards.isEmpty()) {
-            // If no rewards, display a message and an icon
+
             Column(
                 modifier = Modifier.fillMaxSize(),
                 verticalArrangement = Arrangement.Center,

@@ -1,5 +1,5 @@
 // LocationScreen.kt
-package com.mwikali.greenhub.ui.theme.Screens
+package com.mwikali.greenhub.ui.theme.location
 
 import android.Manifest
 import android.content.Context

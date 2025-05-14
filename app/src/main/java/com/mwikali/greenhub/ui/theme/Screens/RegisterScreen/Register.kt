@@ -1,5 +1,4 @@
 package com.mwikali.greenhub.ui.theme.Screens.RegisterScreen
-import com.mwikali.greenhub.data.AuthViewModel
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -44,8 +43,9 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.mwikali.greenhub.R
-import com.mwikali.greenhub.ui.theme.Navigation.ROUTE_DASHBOARD
+import com.mwikali.greenhub.data.AuthViewModel
 import com.mwikali.greenhub.ui.theme.Navigation.ROUTE_LOGIN
+
 @Composable
 fun RegisterScreen(navController: NavController) {
        val authViewModel: AuthViewModel = viewModel()
@@ -81,7 +81,7 @@ fun RegisterScreen(navController: NavController) {
             Color.Green)) { Text(text = "Register") }
         Text(text = buildAnnotatedString { append("If already registered, Login here") }, modifier = Modifier.wrapContentWidth().align(
             Alignment.CenterHorizontally).clickable {
-            navController.navigate(ROUTE_DASHBOARD)
+            navController.navigate(ROUTE_LOGIN)
         })
     }
 

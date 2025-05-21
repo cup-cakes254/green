@@ -68,5 +68,6 @@ dependencies {
     implementation ("com.squareup.okhttp3:logging-interceptor:4.9.0")  // (optional) for logging
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")  // Retrofit dependency
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")  // Gson converter for JSON parsing
-    implementation ("com.google.android.gms:play-services-location:21.0.1")}
-
+    implementation ("com.google.android.gms:play-services-location:21.0.1")
+    implementation("androidx.compose.material:material-icons-extended:1.6.1")
+}

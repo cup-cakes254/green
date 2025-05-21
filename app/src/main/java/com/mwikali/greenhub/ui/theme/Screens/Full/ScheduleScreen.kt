@@ -1,6 +1,5 @@
-package com.mwikali.greenhub.ui.theme.Screens.home
+package com.mwikali.greenhub.ui.theme.Screens.Full
 
-import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*

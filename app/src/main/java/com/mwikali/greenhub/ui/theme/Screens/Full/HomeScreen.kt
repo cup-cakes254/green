@@ -1,7 +1,6 @@
-package com.mwikali.greenhub.ui.theme.Screens.home
+package com.mwikali.greenhub.ui.theme.Screens.Full
 
 
-import RewardListScreen
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
@@ -67,7 +66,6 @@ fun HomeMainScreen(navController: NavHostController) {
         ) {
             composable("home_main") {HomeMainScreen(navController) }
             composable("location") { LocationScreen() }
-            composable("rewards") { RewardListScreen() }
             composable("profile") { ProfileScreen(
                 navController=navController,
                 viewModel=TODO(),

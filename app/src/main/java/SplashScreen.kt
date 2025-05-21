@@ -37,7 +37,8 @@ fun SplashScreen(navController: NavHostController) {
         Spacer(modifier = Modifier.height(16.dp))
         Text(
             text = "Let us make Earth green again!",
-            fontSize = 16.sp
+            fontSize = 16.sp,
+
         )
     }
 

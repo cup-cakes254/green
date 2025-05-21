@@ -70,4 +70,5 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")  // Gson converter for JSON parsing
     implementation ("com.google.android.gms:play-services-location:21.0.1")
     implementation("androidx.compose.material:material-icons-extended:1.6.1")
+    implementation("androidx.navigation:navigation-compose:2.7.7")
 }

@@ -1,5 +1,5 @@
 package com.mwikali.greenhub
-import com.mwikali.greenhub.ui.theme.Navigation.AppNavHost
+import AppNavHost
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent

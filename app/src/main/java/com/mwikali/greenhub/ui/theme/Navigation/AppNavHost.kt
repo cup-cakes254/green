@@ -47,7 +47,6 @@
 //
 
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -55,14 +54,13 @@ import androidx.navigation.compose.rememberNavController
 import com.mwikali.greenhub.ui.theme.Navigation.ROUTE_ADD_USER
 import com.mwikali.greenhub.ui.theme.Navigation.ROUTE_DASHBOARD
 import com.mwikali.greenhub.ui.theme.Navigation.ROUTE_LOGIN
-import com.mwikali.greenhub.ui.theme.Navigation.ROUTE_REGISTER
 import com.mwikali.greenhub.ui.theme.Navigation.ROUTE_SPLASH
 import com.mwikali.greenhub.ui.theme.Navigation.ROUTE_UPDATE_USER
 import com.mwikali.greenhub.ui.theme.Navigation.ROUTE_VIEW_USER
 import com.mwikali.greenhub.ui.theme.Screens.Dashboard.DashboardScreen
 import com.mwikali.greenhub.ui.theme.Screens.Users.AddUserScreen
 import com.mwikali.greenhub.ui.theme.Screens.Users.UpdateUserScreen
-import com.mwikali.greenhub.ui.theme.Screens.Users.ViewUsers
+import com.mwikali.greenhub.ui.theme.screens.users.ViewUsers
 
 @Composable
 fun AppNavHost(navController:NavHostController= rememberNavController(),startDestination:String= ROUTE_SPLASH){

@@ -77,7 +77,10 @@ class UserViewModel : ViewModel() {
 
             val imageUrl = response.body()?.data?.link.orEmpty()
             val userId = usersRef.push().key.orEmpty()
-            val user = UserModel(firstname, lastname, email, bio, imageUrl, userId)
+            val user = UserModel(
+                firstname, lastname, email, bio, imageUrl, userId,
+                userId = TODO()
+            )
 
             usersRef.child(userId).setValue(user)
                 .addOnSuccessListener {
@@ -109,6 +112,20 @@ class UserViewModel : ViewModel() {
     }
 
     /** Updates an existing user’s data (without changing image) */
+    fun updateUserWithImage(
+        imageUri: Uri,
+        context: Context,
+        userId: String,
+        firstname: String,
+        lastname: String,
+        email: String,
+        password: String,
+        bio: String,
+        navController: NavController
+    ) {
+        // Upload image to Firebase Storage, get URL, then call updateUser()
+    }
+
     fun updateUser(
         context: Context,
         navController: NavController,
@@ -116,20 +133,32 @@ class UserViewModel : ViewModel() {
         firstname: String,
         lastname: String,
         email: String,
+        password: String,
         bio: String,
-        password: String
+        imageUrl: String
     ) {
-        val updated = UserModel(firstname, lastname, email, bio, "", userId)
-        usersRef.child(userId).setValue(updated)
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    Toast.makeText(context, "User updated", Toast.LENGTH_SHORT).show()
-                    navController.navigate(ROUTE_PROFILE)
-                } else {
-                    Toast.makeText(context, "Update failed", Toast.LENGTH_SHORT).show()
-                }
+        val updatedUser = UserModel(
+            firstname = firstname,
+            lastname = lastname,
+            email = email,
+            password = password,
+            bio = bio,
+            imageUrl = imageUrl,
+            userId = TODO()
+        )
+
+        FirebaseDatabase.getInstance().getReference("Users")
+            .child(userId)
+            .setValue(updatedUser)
+            .addOnSuccessListener {
+                Toast.makeText(context, "User updated successfully", Toast.LENGTH_SHORT).show()
+                navController.popBackStack()
+            }
+            .addOnFailureListener {
+                Toast.makeText(context, "Update failed: ${it.message}", Toast.LENGTH_SHORT).show()
             }
     }
+
 
     /** Deletes a user after confirmation dialog */
     fun deleteUser(
